@@ -1,0 +1,1 @@
+SELECT name, exemplary FROM districts JOIN staff_evaluations ON staff_evaluations.district_id = districts.id WHERE exemplary > (SELECT AVG(exemplary) FROM staff_evaluations) ORDER BY exemplary DESC LIMIT 10;
